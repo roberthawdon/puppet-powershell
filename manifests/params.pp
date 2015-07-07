@@ -1,4 +1,4 @@
-class puppetpowershell::params () {
+class powershellrunner::params () {
   
   $environment    = $::environment
   $psscriptfile   = undef
