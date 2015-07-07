@@ -8,7 +8,7 @@ class powershellrunner (
   ) inherits powershellrunner::params {
   
       if ($osfamily == 'windows') and ($psscriptfile != undef) {
-            file { $psscriptfile:
+            file { "$psscriptfile":
                   path => $psscriptpath,
                   ensure => "file",
                   source => $source,
