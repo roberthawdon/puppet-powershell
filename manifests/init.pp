@@ -1,10 +1,10 @@
 class powershellrunner (
-  $environment    = $puppetpowershell::params::environment,
-  $psscriptfile   = $puppetpowershell::params::psscriptfile,
-  $powershellexe  = $puppetpowershell::params::powershellexe,
-  $psscriptpath   = $puppetpowershell::params::psscriptpath,
-  $psargs         = $puppetpowershell::params::psargs,
-  $source         = $puppetpowershell::params::source,
+  $environment    = $powershellrunner::params::environment,
+  $psscriptfile   = $powershellrunner::params::psscriptfile,
+  $powershellexe  = $powershellrunner::params::powershellexe,
+  $psscriptpath   = $powershellrunner::params::psscriptpath,
+  $psargs         = $powershellrunner::params::psargs,
+  $source         = $powershellrunner::params::source,
   ) inherits powershellrunner::params {
   
       if ($osfamily == 'windows') and ($psscriptfile != undef) {
