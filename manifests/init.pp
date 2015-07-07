@@ -9,9 +9,9 @@ class powershellrunner (
   
       if ($osfamily == 'windows') and ($psscriptfile != undef) {
             file { 'importscript':
-                  path => $psscriptpath,
+                  path => "$psscriptpath",
                   ensure => "file",
-                  source => $source,
+                  source => "$source",
                   notify => Exec['psscript']
             }
             
