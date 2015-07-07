@@ -7,7 +7,7 @@ class powershellrunner (
   $source         = $puppetpowershell::params::source,
   ) inherits powershellrunner::params {
   
-      if $osfamily == 'windows' {
+      if ($osfamily == 'windows') and (defined($psscriptfile)) {
             file { $psscriptfile:
                   path => $psscriptpath,
                   ensure => "file",
